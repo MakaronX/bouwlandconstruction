@@ -1,0 +1,80 @@
+.stages {
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 17px;
+
+    @include onDesktop {
+      margin-top: 60px;
+      text-align: left;
+      font-size: 30px;
+      line-height: 25px;
+    }
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 2fr);
+      gap: 30px;
+    }
+  }
+
+  &__grid-item {
+    padding: 20px;
+    background-color: $bg-color-second;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include onDesktop {
+      padding: 30px;
+      border-radius: 29px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    color: $white-gray-color;
+    line-height: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    @include onDesktop {
+      font-size: 16px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__image-pc {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      margin-top: 87px;
+    }
+  }
+
+  &__number {
+    align-self: flex-end;
+
+    @include onDesktop {
+      transform: scale(2);
+      margin-right: 15px;
+    }
+  }
+}

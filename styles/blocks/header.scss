@@ -1,0 +1,182 @@
+.header {
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__nav {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      margin-left: auto;
+      padding-right: 20px;
+    }
+  }
+  
+  &__list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+    
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $grey-color;
+    border-bottom: 2px solid rgba(209, 194, 27, 0);
+    transition: border-bottom 0.3s ease;
+    font-family: 'Rubik', sans-serif;
+
+    &:hover {
+      border-bottom: 2px solid rgb(209, 194, 27);
+    }
+  }
+
+  &__main-content {
+    @include onDesktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__image img {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  @include onDesktop {
+    .header__image {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onDesktop {
+      width: 589px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    align-items: center;
+    font-size: 23px;
+
+    @include onDesktop {
+      font-size: 56px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__turnkey {
+    font-size: 11.59px;
+    align-items: right;
+    text-align: right;
+    font-family: 'Rubik', sans-serif;
+    color: $grey-color;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__title-sequel {
+    font-size: 23px;
+    margin-bottom: 26px;
+    line-height: 20px;
+
+    @include onDesktop {
+      font-size: 56px;
+      width: 589px;
+    }
+  }
+
+  &__contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  &__calculate {
+    flex: 1;
+    font-family: 'Rubik', sans-serif;
+    font-size: 11px;
+    color: $grey-color;
+
+    @include onDesktop {
+      order: 1;
+      flex: none;
+      width: 100%;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &__sub-title {
+    flex: 1;
+    font-size: 12px;
+    text-align: right;
+    margin-bottom: 5px;
+    color: $white-gray-color;
+
+    @include onDesktop {
+      order: 3;
+      flex: none;
+      text-align: right;
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 17px;
+    }
+  }
+
+  &__button {
+    flex: 100%;
+    margin-top: 17px;
+    @include button;
+
+    @include onDesktop {
+      order: 2;
+      flex: none;
+      width: 40%;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      max-width: 100%;
+      margin-left: 73px;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+    }
+  } 
+}

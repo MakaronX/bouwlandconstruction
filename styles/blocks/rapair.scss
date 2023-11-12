@@ -1,0 +1,67 @@
+.rapair {
+  background-color: $bg-color-second;
+
+  @include onDesktop {
+    margin: 0 120px;
+    border-radius: 29px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 60px;
+
+    @include onDesktop {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    margin-right: 20px;
+    text-align: center;
+    font-size: 17px;
+
+    @include onDesktop {
+      font-size: 30px;
+      line-height: 25px;
+    }
+  }
+
+  &__title-sequel {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 17px;
+
+    @include onDesktop {
+      font-size: 30px;
+      line-height: 25px;
+    }
+  }
+
+  &__sub-title {
+    margin-bottom: 32px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: $small-text;
+
+    @include onDesktop {
+      font-size: 18px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 60px;
+    @include button;
+
+    @include onDesktop {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}

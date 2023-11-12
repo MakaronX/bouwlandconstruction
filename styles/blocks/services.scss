@@ -1,0 +1,78 @@
+.services {
+  margin-top: 40px;
+
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 17px;
+
+    @include onDesktop {
+      display: flex;
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+  &__image img {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__image-pc img {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+
+    @include onDesktop {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-right: -120px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+  }
+
+  &__grid-item {
+    display: flex;
+    text-align: center;
+    gap: 7px;
+
+    @include onDesktop {
+      gap: 18px;
+      margin-left: 5px;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+    
+    @include onDesktop {
+      transform: scale(1.5);
+    }
+  }
+
+  &__titel {
+    @include onDesktop {
+      font-size: 18px;
+    }
+  }
+}

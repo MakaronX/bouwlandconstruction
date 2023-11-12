@@ -1,0 +1,40 @@
+.projectes {
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 17px;
+
+    @include onDesktop {
+      margin-top: 60px;
+      text-align: left;
+      font-size: 30px;
+      line-height: 25px;
+    }
+  }
+
+  &__image {
+    display: none;
+    img {
+      width: 100%;
+
+      @include onDesktop {
+        border-radius: 29px;
+      }
+    }
+  }
+
+  &__dots {
+    text-align: center;
+    margin-top: 10px;
+
+    .projectes__dot {
+      width: 10px;
+      height: 10px;
+      background-color: $dark-grey;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+}
