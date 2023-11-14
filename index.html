@@ -1,0 +1,818 @@
+<!--#region head -->
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUWLAND CONSTRUCTION</title>
+    <link 
+    rel="icon"
+    href="img/logo.svg">
+    <link rel="stylesheet" href="styles/style.css.map">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="fonts/bicubik.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+<!--#endregion -->
+  <body class="page__body">
+
+    <div id="progress-bar"></div>
+    <div class="cap-bar">
+      <div class="advert">
+        <div class="advert__title">
+          WINTER SALES
+          <span class="advert__span">10% OFF</span>
+          FOR ALL RENOVATION SERVICES
+        </div>
+      </div>
+      <div id="snow-container"></div>
+    </div>
+  
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="top-bar">
+            <div class="top-bar__language">
+              <img src="img/header/Netherland.svg" alt="Netherland">
+            </div>
+            <div class="top-bar__logo">
+              BOUWLAND CONSTRUCTION
+            </div>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link" href="#about-us">ABOUT US</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#advantages">ADVANTAGES</a>
+                </li> 
+                <li class="header__item">
+                  <a class="header__link" href="#projectes">OUR PROJECTES</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#stages">STAGES OF WORK</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#services">SERVICES</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#faq">FAQ</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#contact">CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="top-bar__lang">
+              <img src="img/header/Netherland.svg" alt="Netherland">
+            </div>
+            <a class="top-bar__menu" href="#menu">
+              <img src="img/header/burger-menu.svg" alt="menu">
+            </a>
+          </div>
+          <div class="header__image">
+            <img  src="img/header/header.svg" alt="repairs">
+          </div>
+          <div class="header__main-content">
+            <div class="header__text">
+              <div class="header__title">
+                BOUWLAND
+                <span class="header__turnkey">
+                  Turnkey complex
+                  <br>
+                  repairs
+                </span>
+              </div>
+              <div class="header__title-sequel">CONSTRUCTION</div>
+              <div class="header__contents">
+                <div class="header__calculate">
+                  Calculate the estimated
+                  <br>
+                  Cost of the project
+                </div>
+                <div class="header__sub-title">
+                  REPAIR- AND
+                  <br>
+                  BUILDING COMPANY
+                </div>
+                <button class="header__button" onclick="openPopup()">DISCOVER THE COSTS</button>
+              </div>
+            </div>
+            <div class="header__img">
+              <img src="img/header/header-pc.svg" alt="repaire">
+            </div>
+          </div>
+          <div class="header__icon">
+            <img src="img/header/icon.svg" alt="icon">
+          </div>
+        </div>
+        <div class="popup-container" id="popup">
+          <div class="popup-header">
+            <div class="popup-close" onclick="closePopup()">
+              <img src="img/close-icon.svg" alt="Close">
+            </div>
+          </div>
+          <div class="popup-content">
+            <div class="popup-text">
+              Sign up for a consultation, it's completely free
+            </div>
+            <form class="popup-form" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="name-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required> 
+                <div class="error-message" id="phone-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <div class="error-message" id="comment-error"></div>
+              </div>
+              <button type="submit" class="popup-button">SEND</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="menu page__menu" id="menu">
+      <div class="container">
+        <a href="#header" class="menu__bar">
+          <img src="img/menu/Icon-Close.svg" alt="Icon-Close">
+        </a>
+        <nav class="menu__nav">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#about-us">ABOUT US</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#advantages">ADVANTAGES</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#projectes">OUR PROJECTES</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#stages">STAGES OF WORK</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#services">SERVICES</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#faq">FAQ</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__icons">
+          <a class="menu__icon" href="#">
+            <img src="img/menu/facebook.svg" alt="facebook">
+          </a>
+          <a class="menu__icon" href="#">
+            <img src="img/menu/instagram.svg" alt="Instagram">
+          </a>
+          <a class="menu__icon" href="#">
+            <img src="img/menu/youtube.svg" alt="Youtube">
+          </a>
+        </div>
+        <div class="menu__language">
+          <a class="menu__lan" href="#">EN</a>
+          <a class="menu__lan" href="#">NL</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main__content">
+
+        <section class="about-us" id="about-us">
+          <div class="container">
+            <div class="about-us__image-pc">
+              <img src="img/main/main-pc.svg" alt="repair">
+            </div>
+            <div class="about-us__head-title">ABOUT US</div>
+            <div class="about-us__image">
+              <img src="img/main/main.svg" alt="repair">
+            </div>
+            <div class="about-us__text-container">
+              <div class="about-us__text-item title">ABOUT US</div>
+              <div class="about-us__text-item">
+                Bouwland Construction is a construction 
+                company that performs turnkey renovations 
+                in Amsterdam and the suburbs. We repair 
+                homes, commercial buildings, and other types 
+                of buildings. Attentive foremen and 
+                preparation of design projects, taking into 
+                account the customer's wishes.
+              </div>
+              <div class="about-us__text-item">
+                The work is carried out by certified 
+                professionals, and on time we give a second 
+                life to old buildings and modern stylish 
+                renovation in new residential complexes and 
+                homes. Our craftsmen use equipment and 
+                materials from trusted manufacturers.
+              </div>
+            </div>
+            <div class="about-us__grid-container">
+              <div class="about-us__grid-item">
+                <div class="about-us__icon">
+                  <img src="img/main/icon/group.svg" alt="group">
+                </div>
+                <div class="about-us__icon-pc">
+                  <img src="img/main/icon-pc/group.svg" alt="group">
+                </div>
+                <div class="about-us__text">
+                  All customers
+                  <br>
+                  are satisfied
+                </div>
+              </div>
+              <div class="about-us__grid-item">
+                <div class="about-us__icon">
+                  <img src="img/main/icon/50+.svg" alt="50+">
+                </div>
+                <div class="about-us__icon-pc">
+                  <img src="img/main/icon-pc/50.svg" alt="50+">
+                </div>
+                <div class="about-us__text-one">
+                  Finished
+                  <br>
+                  projects
+                </div>
+              </div>
+              <div class="about-us__grid-item">
+                <div class="about-us__icon">
+                  <img src="img/main/icon/people.svg" alt="people">
+                </div>
+                <div class="about-us__icon-pc">
+                  <img src="img/main/icon-pc/people.svg" alt="people">
+                </div>
+                <div class="about-us__text">
+                  We always go to
+                  <br>
+                  the customer
+                </div>
+              </div>
+              <div class="about-us__grid-item">
+                <div class="about-us__icon">
+                  <img src="img/main/icon/15+.svg" alt="15+">
+                </div>
+                <div class="about-us__icon-pc">
+                  <img src="img/main/icon-pc/15.svg" alt="15">
+                </div>
+                <div class="about-us__text-two">
+                  Years of experience
+                  <br>
+                  under construction
+                </div>
+              </div>
+            </div> 
+          </div>
+        </section>
+
+        <section class="advantages" id="advantages">
+          <div class="advantages__container">
+            <div class="advantages__header">ADVANTAGES</div>
+            <div class="advantages__grid-container">
+              <div class="advantages__grid-item">
+                <div class="advantages__title">
+                  LOYALTY
+                </div>
+                <div class="advantages__sub-title">
+                  We treat the client with understanding, 
+                  changes or unforeseen circumstances. 
+                  We charge the average prices on the 
+                  market with the best quality. Possible 
+                  payment per hour, as well as at a fixed 
+                  price including all materials
+                </div>
+              </div>
+              <div class="advantages__grid-item">
+                <div class="advantages__title">
+                  SPEED
+                </div>
+                <div class="advantages__sub-title">
+                  We start working right away. You don't 
+                  have to search for different companies. 
+                  We carry out turnkey renovations. Our 
+                  craftsmen always complete work on time 
+                  according to plan.
+                </div>
+              </div>
+              <div class="advantages__grid-item">
+                <div class="advantages__title">
+                  QUALITY
+                </div>
+                <div class="advantages__sub-title">
+                  Strict attitude to negligence and the use of
+                  alcoholic beverages during work. Strict quality
+                  control. Warranty for all work performed.
+                  Service maintenance of the object after
+                  delivery. Construction supervision during the
+                  execution of all work in the facility.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="projectes" id="projectes">
+          <div class="container">
+            <div class="projectes__title">
+              OUR PROJECTS
+            </div>
+            <div class="projectes__slider-wrapper">
+              <div class="projectes__slider">
+                <div class="projectes__image">
+                  <img src="img/projectes/project_one.jpeg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_two.jpg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_three.jpg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_four.jpg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_five.jpg" alt="project">
+                </div>
+              </div>
+            </div>
+            <div class="projectes__dots">
+              <div class="projectes__dot"></div>
+              <div class="projectes__dot"></div>
+              <div class="projectes__dot"></div>
+              <div class="projectes__dot"></div>
+              <div class="projectes__dot"></div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="stages" id="stages">
+          <div class="container">
+            <div class="stages__header">STAGES OF WORK</div>
+            <div class="stages__grid-container">
+              <div class="stages__grid-item">
+                <div class="stages__text">
+                  Departure to the object
+                </div>
+                <div class="stages__icons">
+                  <div class="stages__image">
+                    <img src="img/stages/builder.svg" alt="Builder">
+                  </div>
+                  <div class="stages__image-pc">
+                    <img src="img/stages/pc/builder.png" alt="Builder">
+                  </div>
+                  <div class="stages__number">
+                    <img src="img/stages/number/One.svg" alt="One">
+                  </div>
+                </div>
+              </div>
+              <div class="stages__grid-item">
+                <div class="stages__text">
+                  Assessment and consultation
+                </div>
+                <div class="stages__icons">
+                  <div class="stages__image">
+                    <img src="img/stages/blueprint.svg" alt="blueprint">
+                  </div>
+                  <div class="stages__image-pc">
+                    <img src="img/stages/pc/blueprint.png" alt="blueprint">
+                  </div>
+                  <div class="stages__number">
+                    <img src="img/stages/number/two.svg" alt="two">
+                  </div>
+                </div>
+              </div>
+              <div class="stages__grid-item">
+                <div class="stages__text">
+                  Budgeting
+                </div>
+                <div class="stages__icons">
+                  <div class="stages__image">
+                    <img src="img/stages/tasks.svg" alt="tasks">
+                  </div>
+                  <div class="stages__image-pc">
+                    <img src="img/stages/pc/tasks.png" alt="tasks">
+                  </div>
+                  <div class="stages__number">
+                    <img src="img/stages/number/three.svg" alt="three">
+                  </div>
+                </div>
+              </div>
+              <div class="stages__grid-item">
+                <div class="stages__text">
+                  Rough work
+                </div>
+                <div class="stages__icons">
+                  <div class="stages__image">
+                    <img src="img/stages/instrument.svg" alt="instrument">
+                  </div>
+                  <div class="stages__image-pc">
+                    <img src="img/stages/pc/instrument.png" alt="instrument">
+                  </div>
+                  <div class="stages__number">
+                    <img src="img/stages/number/four.svg" alt="four">
+                  </div>
+                </div>
+              </div>
+              <div class="stages__grid-item">
+                <div class="stages__text">
+                  Finish
+                </div>
+                <div class="stages__icons">
+                  <div class="stages__image">
+                    <img src="img/stages/roller.svg" alt="roller">
+                  </div>
+                  <div class="stages__image-pc">
+                    <img src="img/stages/pc/roller.png" alt="roller">
+                  </div>
+                  <div class="stages__number">
+                    <img src="img/stages/number/five.svg" alt="five">
+                  </div>
+                </div>
+              </div>
+              <div class="stages__grid-item">
+                <div class="stages__text">
+                  Delivery of the item
+                </div>
+                <div class="stages__icons">
+                  <div class="stages__image">
+                    <img src="img/stages/car.svg" alt="Car">
+                  </div>
+                  <div class="stages__image-pc">
+                    <img src="img/stages/pc/car.png" alt="car">
+                  </div>
+                  <div class="stages__number">
+                    <img src="img/stages/number/six.svg" alt="One">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="services" id="services">
+          <div class="container">
+            <div class="services__header">SERVICES</div>
+            <div class="services__image">
+              <img src="img/services/image.svg" alt="repair">
+            </div>
+            <div class="services__image-pc">
+              <img src="img/services/image-pc.svg" alt="repair">
+            </div>
+            <div class="services__grid-container">
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/house.svg" alt="house">
+                </div>
+                <div class="services__titel">REPAIR</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/case.svg" alt="case">
+                </div>
+                <div class="services__titel">ELECTRICIAN</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/herontwikkeling.svg" alt="herontwikkeling">
+                </div>
+                <div class="services__titel">REDEVELOPMENT</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/loodgieter.svg" alt="loodgieter">
+                </div>
+                <div class="services__titel">PLUMBER</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/pand.svg" alt="sloop">
+                </div>
+                <div class="services__titel">EXPENSION OF PROPERTY</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/grips.svg" alt="grips">
+                </div>
+                <div class="services__titel">PLASTER</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/sloop.svg" alt="pand">
+                </div>
+                <div class="services__titel">DEMOLITION AND REMOVAL</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/tegels.svg" alt="loodgieter">
+                </div>
+                <div class="services__titel">TO LAY TILES</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/isolatie.svg" alt="isolatie">
+                </div>
+                <div class="services__titel">INSULATION</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/schilderen.svg" alt="schilderen">
+                </div>
+                <div class="services__titel">PAINT</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/keuken.svg" alt="keuken">
+                </div>
+                <div class="services__titel">KITCHEN</div>
+              </div>
+              <div class="services__grid-item">
+                <div class="services__icon">
+                  <img src="img/services/icons/behangen.svg" alt="behangen">
+                </div>
+                <div class="services__titel">PAPERED</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="repair" id="repair">
+          <div class="repair__container">
+            <div class="repair__text">
+              <div class="repair__title">REPAIR</div>
+              <div class="repair__title-sequel">CALCULATOR</div>
+            </div>
+            <div class="repair__sub-title">Discover the preliminary repair costs</div>
+            <button class="repair__button">CALCULATE</button>
+          </div>
+        </section>
+
+        <section class="faq" id="faq">
+          <div class="container">
+            <div class="faq__header">FAQ</div>
+            <div class="faq__grid-container">
+              <div class="faq__grid-item">
+                <div class="faq__button" onclick="toggleSubTitle(this)">
+                  <div class="faq__title-icon">
+                    <span class="faq__title">
+                      What is the work schedule for your craftsmen?
+                    </span>
+                    <div class="faq__icon">
+                      <img class="icon-image" src="img/faq/plus.svg" alt="plus">
+                    </div>
+                  </div>
+                  <div class="faq__sub-title">
+                    We individually draw up a work 
+                    schedule for each client. Specialists
+                    start work at 8.00 or another time
+                    convenient for you. Also, if necessary,
+                    we can work on holidays and weekends.
+                  </div>
+                </div>                
+              </div>
+              <div class="faq__grid-item">
+                <div class="faq__button" onclick="toggleSubTitle(this)">
+                  <div class="faq__title-icon">
+                    <span class="faq__title">
+                      In what case can the cost of services increase in the course of work?
+                    </span>
+                    <div class="faq__icon">
+                      <img class="icon-image" src="img/faq/plus.svg" alt="plus">
+                    </div>
+                  </div>
+                  <div class="faq__sub-title">
+                    The cost of services may change in
+                    case you need additional services or
+                    when painting you decide to replace
+                    white paint with color, since color
+                    painting is longer and more difficult.
+                    In all other cases, our prices remain
+                    the same as at the conclusion of the
+                    contract!
+                  </div>
+                </в>                
+              </div>
+              <div class="faq__grid-item">
+                <div class="faq__button" onclick="toggleSubTitle(this)">
+                  <div class="faq__title-icon">
+                    <div class="faq__title">
+                      How are services paid?
+                    </div>
+                    <div class="faq__icon">
+                      <img class="icon-image" src="img/faq/plus.svg" alt="plus">
+                    </div>
+                  </div>
+                  <div class="faq__sub-title">
+                    Payment is made in stages for a large
+                    amount of work or in one payment
+                    (upon completion of work), if the
+                    order is small.
+                  </div>
+                </div>                
+              </div>
+              <div class="faq__grid-item">
+                <div class="faq__button" onclick="toggleSubTitle(this)">
+                  <div class="faq__title-icon">
+                    <div class="faq__title">
+                      Will I be able to discuss the progress of work with specialists at the site?
+                    </div>
+                    <div class="faq__icon">
+                      <img class="icon-image" src="img/faq/plus.svg" alt="plus">
+                    </div>
+                  </div>
+                  <div class="faq__sub-title">
+                    Yes, there will definitely be people
+                    among the masters with knowledge 
+                    of Dutch, Russian and English, so you
+                    will not have any problems
+                    communicating with them.
+                  </div>
+                </div>                
+              </div>
+              <div class="faq__grid-item">
+                <div class="faq__button" onclick="toggleSubTitle(this)">
+                  <div class="faq__title-icon">
+                    <div class="faq__title">
+                      How long will a specialist visit me to take measurements?
+                    </div>
+                    <div class="faq__icon">
+                      <img class="icon-image" src="img/faq/plus.svg" alt="plus">
+                    </div>
+                  </div>
+                  <div class="faq__sub-title">
+                    The foreman will arrive at the site
+                    within 24 hours after the
+                    consultation. In rare cases, by prior
+                    agreement, a specialist can visit you
+                    within 24 - 48 hours.
+                  </div>
+                </div>                
+              </div>
+              <div class="faq__grid-item faq__border">
+                <div class="faq__button" onclick="toggleSubTitle(this)">
+                  <div class="faq__title-icon">
+                    <div class="faq__title">
+                      How much does the visit of the master to the object cost?
+                    </div>
+                    <div class="faq__icon">
+                      <img class="icon-image" src="img/faq/plus.svg" alt="plus">
+                    </div>
+                  </div>
+                  <div class="faq__sub-title">
+                    A visit of a specialist to assess the
+                    volume, cost of work and the choice
+                    of materials is absolutely free. Even if
+                    the proposed samples of materials or
+                    the cost of our services do not suit
+                    you, you still do not need to pay for
+                    the exit.
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="container">
+            <div class="contact__title">CONTACT</div>
+            <div class="contact__sub-title">
+              Sign up for a consultation, it's
+              <br>
+              completely free
+            </div>
+            <div class="contact__group">
+              <div class="contact__wrapper">
+                <div class="contact__sub-title-second">
+                  Sign up for a consultation, it's
+                  <br>
+                  completely free
+                </div>
+                <form class="contact__form">
+                  <div class="contact__input">
+                    <input type="text" id="naam" name="naam" placeholder="Your name" required>
+                  </div>
+                  <div class="contact__input">
+                    <input type="tel" id="telefoon" name="telefoon" placeholder="Phone number" required>
+                  </div>
+                  <div class="contact__input">
+                    <textarea id="reactie" name="reactie" rows="4" placeholder="Comment" required></textarea>
+                  </div>
+                  <button class="contact__button" type="submit">SEND</button>
+                </form>
+              </div>
+              <article class="contact__info">
+                <div class="contact__maps">
+                  <img src="img/contact/map.svg" alt="map">
+                </div>
+                <div class="contact__maps-pc">
+                  <img src="img/contact/map-pc.svg" alt="map">
+                </div>
+                <div class="contact__map-container">
+                  <div class="contact__map-item">
+                    <div class="contact__map-icon">
+                      <img src="img/contact/icons/phone.svg" alt="phone">
+                    </div>
+                    <div class="contact__map-title">+31 20 893 56 23</div>
+                  </div>
+                  <div class="contact__map-item">
+                    <div class="contact__map-icon">
+                      <img src="img/contact/icons/clock.svg" alt="clock">
+                    </div>
+                    <div class="contact__map-title">09:00 - 18:00</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="contact__bottom">
+              <div class="contact__logo">BOUWLAND CONSTRUCTION</div>
+              <nav class="contact__nav">
+                <ul class="contact__list">
+                  <li class="contact__item">
+                    <a class="contact__link" href="#about-us">ABOUT US</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="#advantages">ADVANTAGES</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="#projectes">OUR PROJECTES</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="#stages">STAGES OF WORK</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="#services">SERVICES</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="#faq">FAQ</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="#contact">CONTACT</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="contact__tel">
+                +31 20 893 56 23
+                <br>
+                <span class="contact__mail">bouwland.construction@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact__bottom-sec">
+              <div class="contact__icons">
+                <a class="contact__icon" href="#">
+                  <img src="img/contact/icons/Facebook.svg" alt="Facebook">
+                </a>
+                <a class="contact__icon" href="#">
+                  <img src="img/contact/icons/Instagram.svg" alt="Instagram">
+                </a>
+                <a class="contact__icon" href="#">
+                  <img src="img/contact/icons/Youtube.svg" alt="Youtube">
+                </a>
+              </div>
+              <div class="contact__tel-second">
+                +31 20 893 56 23
+                <span class="contact__mail-second">bouwland.construction@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>  
+      $(document).ready(function () {
+        const numSnowflakes = 30;
+        const snowflakeContainer = $("#snow-container");
+
+        for (let i = 0; i < numSnowflakes; i++) {
+          let snowflake = document.createElement("div");
+          snowflake.className = "snowflake";
+          snowflake.style.left = Math.random() * 100 + "vw";
+          snowflake.style.animationDuration = (Math.random() * 4 + 2) + "s";
+          snowflake.style.animationDelay = Math.random() * 2 + "s";
+          snowflakeContainer.append(snowflake);
+        }
+      });
+    </script>
+
+  </body>
+</html>
