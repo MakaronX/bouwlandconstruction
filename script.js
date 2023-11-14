@@ -10,49 +10,30 @@ window.addEventListener('scroll', () => {
 
 // PROJECTEN slider
 document.addEventListener('DOMContentLoaded', function () {
-  const images = document.querySelectorAll('.projectes__image');
+  const sliderWrapper = document.querySelector('.projectes__slider-wrapper');
+  const slider = document.querySelector('.projectes__slider');
   const dots = document.querySelectorAll('.projectes__dot');
-  let currentIndex = 0;
-  let isTransitioning = false;
+  let currentSlide = 0;
 
-  function showImage(index) {
-    if (isTransitioning) return;
-    isTransitioning = true;
-
-    images.forEach((image) => (image.style.display = 'none'));
-    dots.forEach((dot) => (dot.style.backgroundColor = 'gray'));
-    images[index].style.display = 'block';
-    dots[index].style.backgroundColor = 'darkgray';
-
-    images[index].style.opacity = 0;
-    images[index].style.transition = 'opacity 0.5s';
-    setTimeout(() => {
-      images[index].style.opacity = 1;
-      isTransitioning = false;
-    }, 0);
+  function showSlide(index) {
+    const slideWidth = slider.clientWidth;
+    const newPosition = -index * slideWidth;
+    slider.style.transform = `translateX(${newPosition}px)`;
   }
 
-  showImage(currentIndex);
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % dots.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + dots.length) % dots.length;
+    showSlide(currentSlide);
+  }
 
   dots.forEach((dot, index) => {
-    dot.addEventListener('click', function () {
-      if (isTransitioning) return;
-      currentIndex = index;
-      showImage(currentIndex);
-    });
+    dot.addEventListener('click', () => showSlide(index));
   });
-
-  function nextImage() {
-    if (isTransitioning) return;
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }
-
-  function prevImage() {
-    if (isTransitioning) return;
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  }
 });
 
 
@@ -69,3 +50,17 @@ function toggleSubTitle(button) {
   }
 }
 
+// pop-up
+function openPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+function submitForm(event) {
+  // Implement form submission logic here
+  // You can validate the form fields and show error messages accordingly
+  event.preventDefault();
+}

@@ -4,7 +4,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOUWLANDCONSTRUCTION</title>
+    <title>BOUWLAND CONSTRUCTION</title>
+    <link 
+    rel="icon"
+    href="img/logo.svg">
     <link rel="stylesheet" href="styles/style.css.map">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="fonts/bicubik.css">
@@ -94,7 +97,7 @@
                   <br>
                   BUILDING COMPANY
                 </div>
-                <button class="header__button">DISCOVER THE COSTS</button>
+                <button class="header__button" onclick="openPopup()">DISCOVER THE COSTS</button>
               </div>
             </div>
             <div class="header__img">
@@ -103,6 +106,41 @@
           </div>
           <div class="header__icon">
             <img src="img/header/icon.svg" alt="icon">
+          </div>
+        </div>
+        <div class="popup-container" id="popup">
+          <div class="popup-header">
+            <div class="popup-close" onclick="closePopup()">
+              <img src="img/close-icon.svg" alt="Close">
+            </div>
+          </div>
+          <div class="popup-content">
+            <div class="popup-text">
+              Sign up for a consultation, it's completely free
+            </div>
+            <form class="popup-form" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="name-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required> 
+                <div class="error-message" id="phone-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <div class="error-message" id="comment-error"></div>
+              </div>
+              <button type="submit" class="popup-button">SEND</button>
+            </form>
           </div>
         </div>
       </div>
@@ -296,21 +334,23 @@
             <div class="projectes__title">
               OUR PROJECTS
             </div>
-            <div class="projectes__slider">
-              <div class="projectes__image">
-                <img src="img/projectes/project_one.svg" alt="project">
-              </div>
-              <div class="projectes__image">
-                <img src="img/projectes/project_one.svg" alt="project">
-              </div>
-              <div class="projectes__image">
-                <img src="img/projectes/project_one.svg" alt="project">
-              </div>
-              <div class="projectes__image">
-                <img src="img/projectes/project_one.svg" alt="project">
-              </div>
-              <div class="projectes__image">
-                <img src="img/projectes/project_one.svg" alt="project">
+            <div class="projectes__slider-wrapper">
+              <div class="projectes__slider">
+                <div class="projectes__image">
+                  <img src="img/projectes/project_one.jpeg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_two.jpg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_three.jpg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_four.jpg" alt="project">
+                </div>
+                <div class="projectes__image">
+                  <img src="img/projectes/project_five.jpg" alt="project">
+                </div>
               </div>
             </div>
             <div class="projectes__dots">
@@ -322,7 +362,6 @@
             </div>
           </div>
         </section>
-        
         
         <section class="stages" id="stages">
           <div class="container">
@@ -514,14 +553,14 @@
           </div>
         </section>
         
-        <section class="rapair" id="rapair">
-          <div class="container">
-            <div class="rapair__text">
-              <div class="rapair__title">REPAIR</div>
-              <div class="rapair__title-sequel">CALCULATOR</div>
+        <section class="repair" id="repair">
+          <div class="repair__container">
+            <div class="repair__text">
+              <div class="repair__title">REPAIR</div>
+              <div class="repair__title-sequel">CALCULATOR</div>
             </div>
-            <div class="rapair__sub-title">Discover the preliminary repair costs</div>
-            <button class="rapair__button">CALCULATE</button>
+            <div class="repair__sub-title">Discover the preliminary repair costs</div>
+            <button class="repair__button">CALCULATE</button>
           </div>
         </section>
 
@@ -731,6 +770,7 @@
               </nav>
               <div class="contact__tel">
                 +31 20 893 56 23
+                <br>
                 <span class="contact__mail">bouwland.construction@gmail.com</span>
               </div>
             </div>
